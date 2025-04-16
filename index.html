@@ -11,7 +11,7 @@
 <body>
     <!-- Default Header -->
      <!-- MENU -->
-    <header id="default-header" class="z-30 transition-opacity duration-500">
+    <header id="default-header" class="z-30 transition-opacity duration-500 bg-white/10 backdrop-blur-sm rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
         <div class="container">
             <a href="#home"><img id="logoimg" src="media/logo.png" alt="logo"></a>
             <div class="font-genocide flex space-x-8 gap-5 items-center h-full">
@@ -23,9 +23,9 @@
             </div>
         </div>
     </header>
-         <!-- FIN MENU -->
-          <!-- UNE FOIS CLIQUE -->
-    <header id="alt-header-zoomed" class="hidden z-50 fixed top-0 left-0 w-full">
+     <!-- FIN MENU -->
+      <!-- UNE FOIS CLIQUE -->
+    <header id="alt-header-zoomed" class="hidden z-50 fixed top-0 left-0 w-full bg-black/30 backdrop-blur-md rounded-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20">
         <div class="container flex justify-between items-center left-5">
             <a href="#"><img id="logoimg" src="media/logo.png" alt="logo"></a>
             <div class="font-genocide flex space-x-8 gap-5 items-center h-full text-white">
@@ -60,12 +60,13 @@
                     <div class="project aspect-video">
                         <img src="media/battle of keys.png" alt="" class="project-img">
                         <div class="project-desc flex-1 md:order-1 order-2">
-                            <p class="opacity-50">HTML/CSS/JS</p>
-                            <h2 class="font-bold text-4xl tracking-tighter mb-3 glow:text-glow/[.15]">Battle Of Keys</h2>
+                            <p class="opacity-50">Vue/Tailwind/JS</p>
+                            <h2 class="font-bold text-4xl tracking-tighter mb-3 glow:text-glow/[.15]">Skinfolio</h2>
                             <div class="md:prose-base prose-lg prose-zinc prose-invert text-opacity-90">
-                              <p>C'est le projet le plus aboutis</p>
-                              <p>un des projet demmander par notre professeur</p>
-                              <p>a l'école by CCI lors d'un cours de javascript.</p>
+                              <p>Un projet personnel visant a transformer</p>
+                              <p>mon inventaire d'item Counter Strike en </p>
+                              <p>portfolio monetaire professionnel avec un suivis </p>
+                              <p>des prix en temps réel. COMPATIBLE MOBILE UNIQUEMENT</p>
                               <a href="https://github.com/Clapseur/BattleofKeys/tree/main/battle%20of%20keys"><button type="button" class="text-white bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">En voir plus</button></a>
                             </div>
                     </div>
@@ -163,5 +164,35 @@
             </div>
         </button>
     <script src="script.js"></script>
+    <!-- Default Header -->
+        <header id="default-header" class="z-30 transition-opacity duration-500 bg-white/10 backdrop-blur-sm rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
+            <div class="container">
+                <a href="#home"><img id="logoimg" src="media/logo.png" alt="logo"></a>
+                <div class="font-genocide flex space-x-8 gap-5 items-center h-full">
+                    <a href="#about">about me</a>
+                    <div class="separator"></div>
+                    <a onclick="enterBigModeHandler()" href="#home">projects</a>
+                    <div class="separator"></div>
+                    <a href="#contact">contact</a>
+                </div>
+            </div>
+        </header>
+    <!-- Alt Header -->
+        <header id="alt-header-zoomed" class="hidden z-50 fixed top-0 left-0 w-full bg-black/30 backdrop-blur-md rounded-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20">
+            <div class="container flex justify-between items-center left-5">
+                <a href="#"><img id="logoimg" src="media/logo.png" alt="logo"></a>
+                <div class="font-genocide flex space-x-8 gap-5 items-center h-full text-white">
+                    <a href="https://music.youtube.com/playlist?list=PL_mClgFbZe_joZtzaRAOtyHzfYXinbAPN&si=P_J_mZtVENalMJFx">MUSIQUE</a>
+                    <div class="separator"></div>
+                    <a href="https://www.youtube.com/watch?v=MqKPMWkO9LQ&list=PL_mClgFbZe_gU5s-8EcD76IWoG0TL62Bq ">VIDEO</a>
+                    <div class="separator"></div>
+                    <a href="https://fr.pinterest.com/evannamorin/inspiration-direction-artistique/">DA GENERAL</a>
+                </div>
+            </div>
+        </header>
+    <!-- Add decorative elements -->
+        <div class="fixed z-40 w-48 h-48 top-20 left-[20%] bg-white/5 backdrop-blur-sm rounded-2xl shadow-[inset_0_0_10px_rgba(255,255,255,0.1)] border border-white/10 rotate-12"></div>
+        <div class="fixed z-40 w-64 h-64 bottom-20 right-[15%] bg-white/10 backdrop-blur-md rounded-2xl shadow-[inset_0_0_15px_rgba(255,255,255,0.15)] border border-white/15 -rotate-6"></div>
+        <div class="fixed z-40 w-32 h-32 top-[40%] right-[30%] bg-black/20 backdrop-blur-sm rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] border border-white/10 rotate-45"></div>
 </body>
 </html>

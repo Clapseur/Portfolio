@@ -166,3 +166,263 @@ if (content) {
         }
     });
 }
+
+// Project cards animation and interaction
+const projectCards = document.querySelectorAll('#home .project-card');
+const modal = document.getElementById('project-modal');
+const modalContent = document.getElementById('modal-content');
+const closeModal = document.getElementById('close-modal');
+
+// Calculate random positions around Big Earth with minimum spacing
+function getRandomPosition(existingPositions) {
+    const minDistance = 300; // Distance minimale entre les cartes
+    const radius = 500; // Distance depuis le centre
+    const minTopMargin = 100; // Marge minimale depuis le haut
+    let attempts = 0;
+    const maxAttempts = 100;
+    
+    while (attempts < maxAttempts) {
+        const angles = [-Math.PI/4, -Math.PI/6, 0, Math.PI/6, Math.PI/4, 
+                       Math.PI - Math.PI/4, Math.PI - Math.PI/6, Math.PI, 
+                       Math.PI + Math.PI/6, Math.PI + Math.PI/4];
+        const angle = angles[Math.floor(Math.random() * angles.length)];
+        const x = Math.cos(angle) * radius;
+        let y = Math.sin(angle) * radius;
+        
+        // Assurer une marge minimale depuis le haut
+        y = Math.max(y, minTopMargin);
+        
+        const isTooClose = existingPositions.some(pos => {
+            const dx = pos.x - x;
+            const dy = pos.y - y;
+            return Math.sqrt(dx * dx + dy * dy) < minDistance;
+        });
+        
+        if (!isTooClose || existingPositions.length === 0) {
+            return { x, y };
+        }
+        
+        attempts++;
+    }
+    
+    return { x: radius, y: minTopMargin };
+}
+
+// Position and animate project cards
+const existingPositions = [];
+projectCards.forEach((card, index) => {
+    const pos = getRandomPosition(existingPositions);
+    existingPositions.push(pos);
+    
+    // Set initial position
+    gsap.set(card, {
+        position: 'absolute',
+        left: '50%',
+        top: '50%',
+        x: pos.x,
+        y: pos.y,
+        xPercent: -50,
+        yPercent: -50,
+        scale: 1
+    });
+
+    // Add floating animation
+    gsap.to(card, {
+        y: `+=${20}`,
+        x: `+=${10}`,
+        duration: 2 + (Math.random() * 1),
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        delay: index * 0.2
+    });
+});
+
+// Modal functionality
+projectCards.forEach((card, index) => {
+    const voirPlusBtn = card.querySelector('.voir-plus');
+    if (voirPlusBtn) {
+        voirPlusBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const project = projectData[index];
+            modal.classList.remove('hidden');
+            
+            // Add dark overlay and center positioning
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.zIndex = '50';
+            
+            modalContent.innerHTML = `
+                <div class="relative bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 w-[40%]">
+                    <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg mb-4">
+                    <h2 class="text-2xl font-genocide mb-4 text-white">${project.title}</h2>
+                    <p class="text-white/80">${project.fullDescription}</p>
+                </div>
+            `;
+
+            gsap.fromTo(modal, 
+                { opacity: 0 },
+                { opacity: 1, duration: 0.3 }
+            );
+            gsap.fromTo(modalContent.firstElementChild,
+                { scale: 0.8, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 0.3, ease: "back.out" }
+            );
+
+            // Add close button functionality
+            const newCloseBtn = modalContent.querySelector('#close-modal');
+            if (newCloseBtn) {
+                newCloseBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    closeModalHandler();
+                });
+            }
+        });
+    }
+});
+
+function closeModalHandler() {
+    gsap.to(modal, {
+        opacity: 0,
+        duration: 0.3,
+        onComplete: () => {
+            modal.classList.add('hidden');
+            modal.style.display = 'none';
+            modal.style.pointerEvents = 'none'; // Disable pointer events when hidden
+        }
+    });
+}
+
+// Close modal when clicking outside
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModalHandler();
+    }
+});
+
+// Project data
+const projectData = [
+    {
+        title: "Project Title 1",
+        description: "Brief description of project 1",
+        fullDescription: "Detailed description of project 1 that will appear in the modal",
+        image: "media/project1.jpg"
+    },
+    {
+        title: "Project Title 2",
+        description: "Brief description of project 2",
+        fullDescription: "Detailed description of project 2 that will appear in the modal",
+        image: "media/project2.jpg"
+    },
+    {
+        title: "Project Title 3",
+        description: "Brief description of project 3",
+        fullDescription: "Detailed description of project 3 that will appear in the modal",
+        image: "media/project3.jpg"
+    }
+];
+
+// Add click handlers for "Voir Plus" buttons
+document.querySelectorAll('.voir-plus').forEach((button, index) => {
+    button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const project = projectData[index];
+        modal.classList.remove('hidden');
+        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)'; // Fond semi-transparent
+        
+        modalContent.innerHTML = `
+            <div class="relative bg-white/20 backdrop-blur-md p-8 rounded-xl border border-white/20 max-w-2xl mx-auto mt-20">
+                <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg mb-4">
+                <h2 class="text-2xl font-genocide mb-4 text-white">${project.title}</h2>
+                <p class="text-white/80">${project.fullDescription}</p>
+            </div>
+        `;
+
+        gsap.fromTo(modal, 
+            { opacity: 0 },
+            { opacity: 1, duration: 0.3 }
+        );
+        gsap.fromTo(modalContent.firstElementChild,
+            { scale: 0.8, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 0.3, ease: "back.out" }
+        );
+
+        // Réinitialiser les gestionnaires d'événements pour le nouveau bouton de fermeture
+        const newCloseBtn = modalContent.querySelector('#close-modal');
+        if (newCloseBtn) {
+            newCloseBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeModalHandler();
+            });
+        }
+    });
+});
+
+function closeModalHandler() {
+    gsap.to(modal, {
+        opacity: 0,
+        duration: 0.3,
+        onComplete: () => modal.classList.add('hidden')
+    });
+}
+
+// Fermer en cliquant en dehors
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModalHandler();
+    }
+});
+
+// Fermer avec la touche Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModalHandler();
+    }
+});
+
+// Initialize EmailJS
+(function() {
+    emailjs.init("9wakw3bfFNMWwtnrd");
+})();
+
+// Contact form functionality
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const templateParams = {
+            title: this.querySelector('input[placeholder="Sujet"]').value,
+            name: this.querySelector('input[type="text"]').value,
+            time : new Date().toLocaleString(),
+            message: this.querySelector('textarea').value,
+            email: this.querySelector('input[type="email"]').value,
+        };
+
+        emailjs.send('service_xk19c8r', 'template_ye75amd', templateParams)
+            .then(function() {
+                alert('Message sent successfully!');
+                contactForm.reset();
+            }, function(error) {
+                console.error('Failed to send message:', error);
+                alert('Failed to send message. Please try again.');
+            });
+    });
+}

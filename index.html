@@ -12,20 +12,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
+<!-- Replace the existing modal div with this -->
 <div id="project-modal" class="fixed inset-0 bg-black/50 backdrop-blur-md hidden z-50 flex items-center justify-center">
-    <div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 max-w-2xl w-full mx-4 relative">
-        <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div id="modal-content" class="relative bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 w-[40%] mx-auto">
+        <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
-        <div id="modal-content" class="text-white overflow-y-auto max-h-[70vh] pr-4 custom-scrollbar">
-            <!-- Content will be dynamically inserted here -->
-        </div>
     </div>
 </div>
 <body>
-    <header id="default-header" class="z-30 transition-opacity duration-500 bg-white/10 backdrop-blur-sm rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
+    <header id="default-header" class="z-30 transition-opacity top-0 left-0 w-full duration-500 bg-white/10 rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
         <div class="container">
             <a href="#home"><img id="logoimg" src="media/logo.png" alt="logo"></a>
             <div class="font-genocide flex space-x-8 gap-5 items-center h-full">
@@ -51,42 +49,42 @@
     </header>
         <div id="horizontal-scroll-container">
             <div id="about" class="relative scroll-section flex flex-col gap-4">
-                <div class=" flex items-center justify-center row-start-1">
+                <div class="flex items-center justify-center row-start-1">
                     <img src="media/Group 2.png" alt=""> 
-                    <p class="desc max-w-96">“Je suis Evann Amorin, un etudiant passionne par le developpement web, actuellement en formation “DN MADE DIGITAL” au sein de L’Ecole by CCI en premiere annee.”</p>
+                    <p class="desc" style="max-width: 24rem; font-size: 0.875rem; line-height: 1.25rem;">"Je suis Evann Amorin, un etudiant passionne par le developpement web, actuellement en formation "DN MADE DIGITAL" au sein de L'Ecole by CCI en premiere annee."</p>
                     <h2></h2>
                 </div>
-                <p class="desc class max-w-[50%]"> mon objectif est de mettre a profit mes competences techniques et ma creativite au sein d’une entreprise en alternance pour developper des projets web innovants et contribuer a des solutions numeriques de qualite. Vous avez probablement dejà visite un peu le site avant de venir ici et vous avez pu voir quelques de mes projets personnel que j’ai pu mettre en piedestal ici, comme vous avez pu le remarquer je suis assez polyvalent et les medias que j’ai consomme jeunot ont fortement forge ce qui m’inspire dans mes projets, ces projets la sont aussi une manière de m’exprimer, d’exprimer ma pensee ou tout simplement pour regler un soucis en creant une chose jamais fait auparavant </p>
+                <p class="desc" style="max-width: 50%; font-size: 0.875rem; line-height: 1.25rem; overflow-wrap: break-word; margin: 0 auto; text-align: center;">mon objectif est de mettre a profit mes competences techniques et ma creativite au sein d'une entreprise en alternance pour developper des projets web innovants et contribuer a des solutions numeriques de qualite. Vous avez probablement dejà visite un peu le site avant de venir ici et vous avez pu voir quelques de mes projets personnel que j'ai pu mettre en piedestal ici, comme vous avez pu le remarquer je suis assez polyvalent et les medias que j'ai consomme jeunot ont fortement forge ce qui m'inspire dans mes projets, ces projets la sont aussi une manière de m'exprimer, d'exprimer ma pensee ou tout simplement pour regler un soucis en creant une chose jamais fait auparavant </p>
                 <a href=""><button type="button" class="text-white bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">telechargez mon CV</button></a>
-                <div class="absolute left-0 top-0 h-40 w-40">
-                    <img class="absolute h-auto w-auto object-cover z-10" src="media/tv noise.gif" alt="">
+                <div class="absolute left-0 top-0 h-full w-40">
+                    <img class="absolute h-full w-auto object-cover z-10" src="media/tv noise.gif" alt="">
                     <img class="absolute h-auto w-full rotate-180 z-20" src="media/Rectangle 3.png" alt="">
                 </div>
             </div>
             <div id="home" class="scroll-section relative">
-                <img id="small-earth" class="absolute z-20 w-16 h-16 animate-pulse ease-in duration-150 hover:animate-pulse transition:ease-in hover:w-32 hover:h-32 rounded-full cursor-pointer" src="media/Small earth.gif" alt="petite planete cliquable">
+                <img id="small-earth" class="absolute z-50 w-16 h-16 animate-pulse ease-in duration-150 hover:animate-pulse transition:ease-in hover:w-32 hover:h-32 rounded-full cursor-pointer" src="media/Small earth.gif" alt="petite planete cliquable">
                 <img id="big-earth" class="w-2/5 rounded-full relative z-10" src="media/Big earth.gif" alt="Big Earth">
                 
                 <div id="floating-projects" class="absolute inset-0 pointer-events-none">
-                    <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 w-64 cursor-pointer hover:scale-105 transition-transform">
+                    <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 w-64 h-[280px] cursor-pointer hover:scale-105 transition-transform">
                         <img src="media/project1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-lg">
-                        <h3 class="text-white mt-2 font-genocide">Project Title 1</h3>
-                        <p class="text-white/80 text-sm mt-1">Brief description of project 1</p>
+                        <h3 class="text-white mt-2 font-genocide text-center">Skinfolio</h3>
+                        <p class="text-white/80 text-sm mt-1 text-center">Transformer vos skins CS2 en portolio inancier professionnel.</p>
                         <button class="voir-plus mt-4 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all w-full">
                             Voir Plus
                         </button>
                     </div>
                     <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 w-64 cursor-pointer hover:scale-105 transition-transform">
                         <img src="media/project2.jpg" alt="Project 2" class="w-full h-40 object-cover rounded-lg">
-                        <h3 class="text-white mt-2 font-genocide">Project Title 2</h3>
-                        <p class="text-white/80 text-sm mt-1">Brief description of project 2</p>
+                        <h3 class="text-white mt-2 font-genocide">Retro Morpion</h3>
+                        <p class="text-white/80 text-sm mt-1">On me refuse pas un jeu auquel on fait parti.</p>
                         <button class="voir-plus mt-4 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all w-full">
                             Voir Plus
                         </button>
                     </div>
                     <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 w-64 cursor-pointer hover:scale-105 transition-transform">
                         <img src="media/project3.jpg" alt="Project 3" class="w-full h-40 object-cover rounded-lg">
-                        <h3 class="text-white mt-2 font-genocide">Project Title 3</h3>
+                        <h3 class="text-white mt-2 font-genocide">Lluvia Eterna</h3>
                         <p class="text-white/80 text-sm mt-1">Brief description of project 3</p>
                         <button class="voir-plus mt-4 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all w-full">
                             Voir Plus
@@ -96,8 +94,8 @@
             </div>
             <div id="contact" class="scroll-section">
                 <h1>Contact Me</h1>
-                <div id="contact" class="relative scroll-section">
-                    <div class="p-4 mx-auto max-w-xl bg-white font-[sans-serif] space-y-4 rounded-lg shadow-lg flex justify-between">
+                <div id="contact" class="relative scroll-section flex flex-col">
+                    <div class="p-4 mx-auto max-w-xl bg-white space-y-4 rounded-lg shadow-lg flex flex-col">
                            <h1 class="text-2xl text-white font-bold text-center">Contact me</h1>
                         <form class="mt-8 space-y-4">
                             <input type='text' placeholder='Nom et Prenom' required
@@ -111,6 +109,33 @@
                             <button type='submit'
                                 class="text-white bg-black hover:bg-gray-900 tracking-wide text-sm px-4 py-2.5 w-full outline-none">Envoyer</button>
                         </form>
+                    </div>
+                    <div class="mt-6 p-6 mx-auto max-w-xl bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                        <h3 class="text-white text-xl font-bold mb-4">Besoin d'un contact direct ?</h3>
+                        <div class="space-y-4">
+                            <p class="text-gray-300 text-base leading-relaxed">
+                                Pour toute proposition urgente ou discussion directe, je suis disponible par téléphone :
+                            </p>
+                            
+                            <div class="flex flex-col gap-3 mt-2">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full center animate-pulse"></div>
+                                    <span class="text-white font-medium">Lundi - Vendredi :</span>
+                                    <span class="text-white/80">08:00 - 20:00</span>
+                                </div>
+                                
+                                <div class="flex items-center center gap-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                                    <span class="text-white font-medium">Samedi - Dimanche :</span>
+                                    <span class="text-white/80">10:00 - 22:00</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 bg-white/10 rounded-md">
+                                <p class="text-gray-400 text-sm italic">
+                                    Note : Indisponible pendant les jours fériés et vacances scolaires
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                     <div class="absolute right-0 top-0 h-full w-40">
@@ -142,30 +167,6 @@
             </div>
         </button>
     <script src="script.js"></script>
-        <header id="default-header" class="z-30 transition-opacity duration-500 bg-white/10 backdrop-blur-sm rounded-xl shadow-[inset_0_0_10px_rgba(255,255,255,0.2)] border border-white/20">
-            <div class="container">
-                <a href="#home"><img id="logoimg" src="media/logo.png" alt="logo"></a>
-                <div class="font-genocide flex space-x-8 gap-5 items-center h-full">
-                    <a href="#about">about me</a>
-                    <div class="separator"></div>
-                    <a onclick="enterBigModeHandler()" href="#home">projects</a>
-                    <div class="separator"></div>
-                    <a href="#contact">contact</a>
-                </div>
-            </div>
-        </header>
-        <header id="alt-header-zoomed" class="hidden z-50 fixed top-0 left-0 w-full bg-black/30 backdrop-blur-md rounded-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20">
-            <div class="container flex justify-between items-center left-5">
-                <a href="#"><img id="logoimg" src="media/logo.png" alt="logo"></a>
-                <div class="font-genocide flex space-x-8 gap-5 items-center h-full text-white">
-                    <a href="https://music.youtube.com/playlist?list=PL_mClgFbZe_joZtzaRAOtyHzfYXinbAPN&si=P_J_mZtVENalMJFx">MUSIQUE</a>
-                    <div class="separator"></div>
-                    <a href="https://www.youtube.com/watch?v=MqKPMWkO9LQ&list=PL_mClgFbZe_gU5s-8EcD76IWoG0TL62Bq ">VIDEO</a>
-                    <div class="separator"></div>
-                    <a href="https://fr.pinterest.com/evannamorin/inspiration-direction-artistique/">DA GENERAL</a>
-                </div>
-            </div>
-        </header>
         <div class="fixed z-40 w-48 h-48 top-20 left-[20%] bg-white/5 backdrop-blur-sm rounded-2xl shadow-[inset_0_0_10px_rgba(255,255,255,0.1)] border border-white/10 rotate-12"></div>
         <div class="fixed z-40 w-64 h-64 bottom-20 right-[15%] bg-white/10 backdrop-blur-md rounded-2xl shadow-[inset_0_0_15px_rgba(255,255,255,0.15)] border border-white/15 -rotate-6"></div>
         <div class="fixed z-40 w-32 h-32 top-[40%] right-[30%] bg-black/20 backdrop-blur-sm rounded-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.2)] border border-white/10 rotate-45"></div>

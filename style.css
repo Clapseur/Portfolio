@@ -397,3 +397,22 @@ body {
 #horizontal-scroll-container {
     overflow-y: hidden;
 }
+
+/* Header z-index adjustments */
+#default-header {
+    z-index: 1000;
+}
+
+#alt-header-zoomed {
+    z-index: 1000;
+}
+
+/* Project cards z-index adjustments */
+.project-card {
+    z-index: 900;
+}
+
+/* Ensure modal stays on top of everything */
+#project-modal {
+    z-index: 9999;
+}

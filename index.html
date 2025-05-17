@@ -6,7 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="./output.css" rel="stylesheet">
-    <title>Evann Amorin - Portfolio</title>
+    <title>Evann Amorin | Développeur Web Créatif | Portfolio</title>
+    
+    <!-- Meta description -->
+    <meta name="description" content="Portfolio d'Evann Amorin, étudiant en DN MADE DIGITAL et développeur web créatif. Découvrez mes projets innovants et mes compétences en développement web.">
+    <meta name="keywords" content="Evann Amorin, portfolio, développeur web, design numérique, projets créatifs, DN MADE DIGITAL">
+    <meta name="author" content="Evann Amorin">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Evann Amorin | Développeur Web Créatif">
+    <meta property="og:description" content="Portfolio d'Evann Amorin, étudiant en DN MADE DIGITAL et développeur web créatif. Découvrez mes projets innovants.">
+    <meta property="og:image" content="media/logo.png">
+    <meta property="og:url" content="https://evann-amorin.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Evann Amorin | Développeur Web Créatif">
+    <meta name="twitter:description" content="Portfolio d'Evann Amorin, étudiant en DN MADE DIGITAL et développeur web créatif.">
+    <meta name="twitter:image" content="media/logo.png">
+    
+    <!-- Theme color for browser UI -->
+    <meta name="theme-color" content="#000000">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -66,29 +88,31 @@
                 <img id="big-earth" class="w-2/5 rounded-full relative z-10" src="media/Big earth.gif" alt="Big Earth">
                 
                 <div id="floating-projects" class="absolute inset-0 pointer-events-none">
-                    <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 w-64 h-[280px] cursor-pointer hover:scale-105 transition-transform">
-                        <img src="media/project1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-lg">
-                        <h3 class="text-white mt-2 font-genocide text-center">Skinfolio</h3>
-                        <p class="text-white/80 text-sm mt-1 text-center">Transformer vos skins CS2 en portolio inancier professionnel.</p>
-                        <button class="voir-plus mt-4 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all w-full">
-                            Voir Plus
-                        </button>
+                    <!-- For the first project card -->
+                    <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-lg border border-white/20 p-2 w-32 h-[160px] cursor-pointer hover:scale-105 transition-transform">
+                        <div class="h-16 flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="media/project1.png" alt="Project 1" style="width: 60px; height: 40px; object-fit: contain;" class="rounded-lg">
+                        </div>
+                        <h3 class="text-white mt-1 font-genocide text-center text-xs">Skinfolio</h3>
+                        <p class="text-white/80 text-[10px] mt-1 text-center line-clamp-2">Transformer vos skins CS2 en portolio inancier professionnel.</p>
                     </div>
-                    <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 w-64 cursor-pointer hover:scale-105 transition-transform">
-                        <img src="media/project2.jpg" alt="Project 2" class="w-full h-40 object-cover rounded-lg">
-                        <h3 class="text-white mt-2 font-genocide">Retro Morpion</h3>
-                        <p class="text-white/80 text-sm mt-1">On me refuse pas un jeu auquel on fait parti.</p>
-                        <button class="voir-plus mt-4 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all w-full">
-                            Voir Plus
-                        </button>
+                    
+                    <!-- For the second project card -->
+                    <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-lg border border-white/20 p-2 w-32 h-[160px] cursor-pointer hover:scale-105 transition-transform">
+                        <div class="h-16 flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="media/project2.png" alt="Project 2" style="width: 60px; height: 40px; object-fit: contain;" class="rounded-lg">
+                        </div>
+                        <h3 class="text-white mt-1 font-genocide text-xs">Retro Morpion</h3>
+                        <p class="text-white/80 text-[10px] mt-1 line-clamp-2">On me refuse pas un jeu auquel on fait parti.</p>
                     </div>
-                    <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 w-64 cursor-pointer hover:scale-105 transition-transform">
-                        <img src="media/project3.jpg" alt="Project 3" class="w-full h-40 object-cover rounded-lg">
-                        <h3 class="text-white mt-2 font-genocide">Lluvia Eterna</h3>
-                        <p class="text-white/80 text-sm mt-1">Brief description of project 3</p>
-                        <button class="voir-plus mt-4 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all w-full">
-                            Voir Plus
-                        </button>
+                    
+                    <!-- For the third project card -->
+                    <div class="project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-lg border border-white/20 p-2 w-32 h-[160px] cursor-pointer hover:scale-105 transition-transform">
+                        <div class="h-16 flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="media/project3.png" alt="Project 3" style="width: 60px; height: 40px; object-fit: contain;" class="rounded-lg">
+                        </div>
+                        <h3 class="text-white mt-1 font-genocide text-xs">Lluvia Eterna</h3>
+                        <p class="text-white/80 text-[10px] mt-1 line-clamp-2">Une parfumerie en ligne inspirée des souvenirs d'enfance.</p>
                     </div>
                 </div>
             </div>

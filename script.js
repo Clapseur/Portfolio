@@ -1,52 +1,41 @@
 const projectData = [
     {
-        title: "Clapseur - YoutTube",
-        description: "Vidéo produite par mes mains de A a Z ",
+        title: "Clapseur - YouTube",
+        description: "Video, montage, derush, upload, son, DA produit par mes soins ",
         fullDescription: `
             <div class="space-y-8">
                 <div class="relative w-full h-64">
                     <video class="w-full h-full object-cover rounded-lg" autoplay loop muted playsinline>
-                        <source src="media/skinfolio-demo.mp4" type="video/mp4">
+                        <source src="media/yt.mp4" type="video/mp4">
                     </video>
                 </div>
                 
-                <div class="prose prose-invert max-w-none">
-                    <h1 class="text-3xl font-genocide text-white/90 mb-4">${this.title}</h1>
-                    
-                    <div class="flex gap-2 mb-6">
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-sm">React.js</span>
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Steam API</span>
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-sm">Node.js</span>
-                    </div>
+                <div class="prose prose-invert max-w-none center">
 
-                    <h2 class="text-xl font-genocide text-white/90 mt-8">Le Concept</h2>
+                    <h2 class="text-xl font-genocide text-white/90 mt-8" center>Le Concept</h2>
                     <p class="text-white/80 leading-relaxed mb-6">
-                        Skinfolio transforme vos skins CS2 en un portfolio financier professionnel. Une approche unique qui marie le gaming et la finance, permettant aux joueurs de visualiser leur collection comme un véritable investissement.
+                        La chaine YouTube etait un projet que j'avais lance en 2016, et j'ai commencé par créer des vidéos basique sur les jeux vidéo. J'ai ensuite commencé à publier des vidéos sur YouTube, en agrandissant ma malette de conaissance dans ce milieu.
                     </p>
                     
-                    <h2 class="text-xl font-genocide text-white/90 mt-8">Technologies Utilisées</h2>
-                    <ul class="list-disc list-inside text-white/80 space-y-2 mb-6">
-                        <li>React.js pour l'interface utilisateur</li>
-                        <li>Steam API pour la récupération des données</li>
-                        <li>Node.js pour le backend</li>
-                        <li>MongoDB pour le stockage des données</li>
+                    <div class="space-y-4 center">
+                    <h3 class="text-xl font-genocide text-white/90 mt-8" center">Competences/Connaissance</h3>
+                    <p class="text-white/80 leading-relaxed">
+                        Clapseur est une chaîne YouTube dédiee à la creation de contenu innovant et engageant. C'est un défi que je relève depuis 2016. Chaque vidéo est soigneusement produite pour offrir une expérience unique aux spectateurs.
+                    </p>
+                    
+                    <h3 class="text-xl font-genocide text-white/90 mt-8" center">Contenu</h3>
+                    <ul class="list-disc list-inside text-white/80 space-y-2">
+                        <li>Vidéos Best-off</li>
+                        <li>Contenu original et créatif</li>
+                        <li>Montage Peu commun</li>
+                        <li>Interaction avec la communauté fréquente</li>
                     </ul>
-
-                    <h2 class="text-xl font-genocide text-white/90 mt-8">Fonctionnalités Clés</h2>
-                    <div class="grid grid-cols-2 gap-4 mt-4">
-                        <div class="bg-white/5 p-4 rounded-lg">
-                            <h3 class="font-genocide text-lg mb-2">Analyse en temps réel</h3>
-                            <p class="text-sm text-white/70">Suivi des prix du marché en direct</p>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-lg">
-                            <h3 class="font-genocide text-lg mb-2">Historique détaillé</h3>
-                            <p class="text-sm text-white/70">Visualisation de l'évolution des prix</p>
-                        </div>
-                    </div>
+                </div>
                 </div>
             </div>`,
-        image: "media/project1.jpg",
-        videoUrl: "media/skinfolio-demo.mp4"
+        image: "media/yt.webp",
+        videoUrl: "media/yt.mp4",
+        websiteUrl: "https://www.youtube.com/@clapseur" 
     },
     {
         title: "Clapseur - Soundcloud",
@@ -54,57 +43,141 @@ const projectData = [
         fullDescription: `
             <div class="space-y-6">
                 <div class="relative w-full h-96">
-                    <video class="w-full h-full object-cover rounded-lg" autoplay loop muted playsinline>
-                        <source src="media/morpion-demo.mp4" type="video/mp4">
-                    </video>
+                    <iframe 
+                        width="100%" 
+                        height="300" 
+                        scrolling="no" 
+                        frameborder="no" 
+                        allow="autoplay" 
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1543949563&color=%2321201f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                    </iframe>
+                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                        <a href="https://soundcloud.com/clapseur" title="Clapseur" target="_blank" style="color: #cccccc; text-decoration: none;">Clapseur</a> · 
+                        <a href="https://soundcloud.com/clapseur/spy-shit" title="Spy shit" target="_blank" style="color: #cccccc; text-decoration: none;">Spy shit</a>
+                    </div>
                 </div>
                 
                 <div class="space-y-4">
                     <h3 class="text-xl font-genocide text-white/90">Le Projet</h3>
                     <p class="text-white/80 leading-relaxed">
-                        Une réinvention moderne du jeu classique du Morpion, avec une interface épurée et des animations fluides. Le jeu inclut un mode joueur contre joueur local et un mode contre l'IA.
+                        La musique deupis mon plus jeune age m'a toujours fait vibré et a été une manière pour moi de m'exprimer d'une autre manière.
                     </p>
                     
-                    <h3 class="text-xl font-genocide text-white/90">Caractéristiques</h3>
+                    <h3 class="text-xl font-genocide text-white/90">Caracteristiques</h3>
                     <ul class="list-disc list-inside text-white/80 space-y-2">
-                        <li>Interface minimaliste et responsive</li>
-                        <li>Animations fluides avec GSAP</li>
-                        <li>IA avec différents niveaux de difficulté</li>
-                        <li>Mode sombre/clair</li>
+                        <li>Musique varie</li>
+                        <li>Prodeuction de MAO</li>
+                        <li>FL Studio/Abbleton</li>
+                        <li>Multi-genre</li>
                     </ul>
                 </div>
             </div>`,
-        image: "media/project2.jpg",
-        videoUrl: "media/morpion-demo.mp4"
+        websiteUrl: "https://soundcloud.com/clapseur",
+        image: "media/sc.png",
     },
     {
-        title: "Clapseur - Youtube",
-        description: "Parfumerie en ligne basé sur les souvenirs d'enfance.",
+        title: "Clapseur - Twitch",
+        description: "Ma chaine de streaming contabilisant le plus grand nombre de d'abonnés.",
         fullDescription: `
             <div class="space-y-6">
                 <div class="relative w-full h-96">
-                    <video class="w-full h-full object-cover rounded-lg" autoplay loop muted playsinline>
-                        <source src="media/clapseur-demo.mp4" type="video/mp4">
-                    </video>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://player.twitch.tv/?channel=clapseur&autoplay=false&parent=iframe.ly&parent=cdn.iframe.ly&parent=iframely.net&parent=iframely.com&parent=if-cdn.com" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media *;"></iframe></div>
                 </div>
                 
                 <div class="space-y-4">
                     <h3 class="text-xl font-genocide text-white/90">L'Inspiration</h3>
                     <p class="text-white/80 leading-relaxed">
-                        Clapseur est une chaîne YouTube dédiée à la création de contenu innovant et engageant. Chaque vidéo est soigneusement produite pour offrir une expérience unique aux spectateurs.
+                        J'ai longtemps aimé le jeu Counter-Strike 2, et j'ai toujours aimé la communaute de ce jeu. J'ai donc décidé de créer une chaine Twitch qui mettait en valeur ma passion pour le jeu et espere egalement pourvoir la transmettre a d'autres personnes.
                     </p>
                     
                     <h3 class="text-xl font-genocide text-white/90">Contenu</h3>
                     <ul class="list-disc list-inside text-white/80 space-y-2">
-                        <li>Vidéos hebdomadaires</li>
+                        <li>Vidéos Best-off</li>
                         <li>Contenu original et créatif</li>
-                        <li>Édition professionnelle</li>
-                        <li>Interaction avec la communauté</li>
+                        <li>Montage Peu commun</li>
+                        <li>Interaction avec la communauté fréquente</li>
                     </ul>
                 </div>
             </div>`,
-        image: "media/project3.jpg",
-        videoUrl: "media/clapseur-demo.mp4"
+        image: "media/tw.png",
+        videoUrl: "media/tw.png",
+        websiteUrl: "https://www.twitch.tv/clapseur"
+    }
+];
+
+const regularProjectData = [
+    {
+        title: "Skinfolio",
+        description: "Transformer vos skins CS2 en portolio inancier professionnel.",
+        fullDescription: `
+                <div class="relative w-full h-64">
+                    <img class="w-full h-full object-cover rounded-lg" src="media/project1.png" alt="YouTube thumbnail">
+                </div>
+            
+            <div class="space-y-8 text-center">
+                <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Le Projet</h2>
+                <p class="text-white/80 leading-relaxed mb-6">
+                    Une application web innovante qui transforme votre inventaire CS2 en un portfolio financier professionnel.
+                </p>
+                
+                <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Caracteristiques</h2>
+                <ul class="list-disc list-inside text-white/80 space-y-2">
+                    <li>Analyse détaillée des skins</li>
+                    <li>Suivi des prix en temps réel</li>
+                    <li>Statistiques de trading</li>
+                    <li>Interface professionnelle</li>
+                </ul>
+            </div>`,
+            websiteUrl: "https://skinfolio-xi.vercel.app"
+    },
+    {
+        title: "Retro Morpion",
+        description: "On me refuse pas un jeu auquel on fait parti.",
+        fullDescription: `
+            <div class="relative w-full h-64">
+                <img class="w-full h-full object-cover rounded-lg" src="media/project2.png" alt="Retro Morpion thumbnail">
+            </div>
+            
+            <div class="space-y-8 text-center">
+                <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Le Jeu</h2>
+                <p class="text-white/80 leading-relaxed mb-6">
+                    Une réinvention moderne du jeu classique du Morpion, avec une interface rétro et des animations fluides.
+                </p>
+                
+                <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Fonctionnalites</h2>
+                <ul class="list-disc list-inside text-white/80 space-y-2">
+                    <li>Mode 2 joueurs local</li>
+                    <li>Intégration photo des joueurs</li>
+                    <li>Design rétro authentique</li>
+                    <li>Effets sonores nostalgiques</li>
+                </ul>
+            </div>`,
+            websiteUrl: "https://morpion-seven.vercel.app/index.html" 
+    },
+    {
+        title: "Lluvia Eterna",
+        description: "Brief description of project 3",
+        fullDescription: `
+            <div class="relative w-full h-64">
+                <img class="w-full h-full object-cover rounded-lg" src="media/project3.png" alt="Lluvia Eterna thumbnail">
+            </div>
+            
+            <div class="space-y-8 text-center">
+                <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Le Concept</h2>
+                <p class="text-white/80 leading-relaxed mb-6">
+                    Une parfumerie en ligne remettant en valeur les souvenirs d'enfance.
+                </p>
+                
+                <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Caracteristiques</h2>
+                <ul class="list-disc list-inside text-white/80 space-y-2">
+                    <li>Parfumerie en ligne</li>
+                    <li>Collection de parfums</li>
+                    <li>Design épuré et noble</li>
+                    <li>Expérience utilisateur intuitive</li>
+                </ul>
+            </div>`,
+            websiteUrl: "https://lluvia-eterna.vercel.app" // Fixed URL
+            
     }
 ];
 
@@ -119,6 +192,14 @@ const mainHeader = document.querySelector('#default-header');
 const altHeaderZoomed = document.querySelector('#alt-header-zoomed');
 const exitBigMode = document.getElementById('close-btn');
 const zoomedInContent = document.getElementById('zoomed-in-content');
+
+// Add this line to get references to your regular project cards
+const regularProjectCards = document.querySelectorAll('.project-card');
+
+// Add the handler to regular project cards
+regularProjectCards.forEach((card, index) => {
+    card.addEventListener('click', createProjectModalHandler(regularProjectData[index]));
+});
 
 let currentIndex = 0; // Tracks the current section
 let isZoomedIn = false; // Tracks whether the site is in zoomed-in mode
@@ -223,20 +304,28 @@ function enterBigModeHandler() {
 
     for (let i = 0; i < numDivs; i++) {
         const div = document.createElement('div');
-        div.className = 'floating-div bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4';
+        div.className = 'floating-div bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 cursor-pointer';
         div.style.position = 'absolute';
         div.style.zIndex = '900';
         div.style.width = '150px';
         div.style.height = '100px';
         div.style.overflow = 'hidden';
         
+        // Get data from projectData array instead of regularProjectData
+        const project = projectData[i];
+        // Updated HTML with smaller image container and project data
         div.innerHTML = `
             <div class="h-full flex flex-col justify-between">
-                <h3 style="font-size: 8px; margin-bottom: 4px; color: white; font-family: genocide;">Project ${i + 1}</h3>
-                <p style="font-size: 6px; color: rgba(255,255,255,0.8); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">${projectData[i]?.description || 'Brief description'}</p>
-                <button class="voir-plus animate-pulse hover:animate-none bg-white/10 hover:bg-white/20 px-2 py-1 rounded transition-all" style="font-size: 7px; color: white;">Voir plus</button>
+                <div class="h-8 overflow-hidden rounded mb-1">
+                    <img src="${project.image}" alt="${project.title}" style="width: 80px; height: 50px; object-fit: contain; margin: 0 auto;" class="rounded">
+                </div>
+                <h3 style="font-size: 8px; margin-bottom: 2px; color: white; font-family: genocide;">${project.title}</h3>
+                <p style="font-size: 6px; color: rgba(255,255,255,0.8); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${project.description}</p>
             </div>
         `;
+
+        // Add click handler to the entire div
+        div.addEventListener('click', createProjectModalHandler(projectData[i]));
 
         document.querySelector('#home').appendChild(div);
         floatingDivs.push(div);
@@ -244,11 +333,11 @@ function enterBigModeHandler() {
         // Calculate initial position with increased radius and custom positioning for the third div
         let x, y;
         if (i === 2) { // For the third div (Project 3)
-            x = -radius * 1.2; // Keep the same horizontal position
-            y = radius * 0.5;  // Reduce the vertical offset to move it higher
+            x = -radius * 1; // Keep the same horizontal position
+            y = radius * 0;  // Reduce the vertical offset to move it higher
         } else if (i === 1) { // For the second div (Project 2)
             x = radius * 0;  // Adjust horizontal position
-            y = radius * 0.6;  // Reduce the vertical offset to move it higher
+            y = radius * 0.8;  // Reduce the vertical offset to move it higher
         } else {
             const angle = (i / (numDivs - 1)) * Math.PI; // Distribute other divs evenly
             x = Math.cos(angle) * radius;
@@ -290,6 +379,7 @@ function enterBigModeHandler() {
         if (voirPlusBtn) {
             voirPlusBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
+                // Use projectData instead of regularProjectData
                 const project = projectData[i];
                 
                 const modal = document.getElementById('project-modal');
@@ -298,6 +388,21 @@ function enterBigModeHandler() {
                 // Show modal
                 modal.classList.remove('hidden');
                 modal.style.opacity = '0';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Darker background
+                
+                // Set modal content size and scrollable content
+                modalContent.style.height = '90vh';
+                modalContent.style.width = '50%';
+                modalContent.style.maxWidth = '50%';
+                modalContent.style.margin = 'auto';
+                modalContent.style.overflowY = 'auto';
+                modalContent.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; // Darker content background
+                
+                // Add website URL (default to # if not provided)
+                const websiteUrl = project.websiteUrl || "https://example.com";
                 
                 modalContent.innerHTML = `
                     <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
@@ -305,15 +410,22 @@ function enterBigModeHandler() {
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <div class="overflow-y-auto max-h-[80vh] pr-4 -mr-4">
-                        ${project.fullDescription}
+                    <div class="overflow-y-auto h-full pr-4 -mr-4 pb-16">
+                        ${project.fullDescription.replace(/<h2/g, '<h2 class="text-center text-xl font-genocide text-white/90 mt-8"')}
+                        <div class="mt-8 text-center">
+                            <a href="${websiteUrl}" target="_blank" class="inline-block px-6 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all font-genocide border border-white/30 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                Visualiser
+                            </a>
+                        </div>
                     </div>
                 `;
                 
                 // Add modal event listeners
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) {
-                        closeModalHandler();
+                        // Close instead of hide
+                        modal.style.display = 'none';
+                        modal.classList.add('hidden');
                     }
                 });
                 
@@ -444,7 +556,6 @@ const modal = document.getElementById('project-modal');
 const modalContent = document.getElementById('modal-content');
 const closeModal = document.getElementById('close-modal');
 
-// Create a reusable click handler function for project modals
 function createProjectModalHandler(project) {
     return (e) => {
         e.stopPropagation();
@@ -455,6 +566,21 @@ function createProjectModalHandler(project) {
         // Show modal
         modal.classList.remove('hidden');
         modal.style.opacity = '0';
+        modal.style.display = 'flex';
+        modal.style.alignItems = 'center';
+        modal.style.justifyContent = 'center';
+        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        
+        // Set modal content size and scrollable content
+        modalContent.style.height = '90vh';
+        modalContent.style.width = '50%';
+        modalContent.style.maxWidth = '50%';
+        modalContent.style.margin = 'auto';
+        modalContent.style.overflowY = 'auto';
+        modalContent.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+        
+        // Add website URL (default to # if not provided)
+        const websiteUrl = project.websiteUrl || "https://example.com";
         
         modalContent.innerHTML = `
             <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
@@ -462,8 +588,13 @@ function createProjectModalHandler(project) {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
-            <div class="overflow-y-auto max-h-[80vh] pr-4 -mr-4">
-                ${project.fullDescription}
+            <div class="overflow-y-auto h-full pr-4 -mr-4 pb-16">
+                ${project.fullDescription.replace(/<h2/g, '<h2 class="text-center text-xl font-genocide text-white/90 mt-8"')}
+                <div class="mt-8 text-center">
+                    <a href="${websiteUrl}" target="_blank" class="inline-block px-6 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all font-genocide border border-white/30 shadow-lg animate-pulse hover:animate-none">
+                        Visualiser
+                    </a>
+                </div>
             </div>
         `;
         
@@ -561,74 +692,101 @@ projectCards.forEach((card, index) => {
     });
 });
 
+// Function to close modal
 function closeModalHandler() {
-    const modalToClose = document.getElementById('project-modal');
-    if (modalToClose) {
-        gsap.to(modalToClose, {
-            opacity: 0,
-            duration: 0.3,
-            onComplete: () => {
-                modalToClose.classList.add('hidden');
-                const modalContent = document.getElementById('modal-content');
-                modalContent.innerHTML = '';
-            }
-        });
-    }
+    const modal = document.getElementById('project-modal');
+    
+    // Animation for closing
+    gsap.to(modal, {
+        opacity: 0,
+        duration: 0.3,
+        onComplete: () => {
+            modal.style.display = 'none';
+            modal.classList.add('hidden');
+        }
+    });
 }
 
-// Modal functionality
-projectCards.forEach((card, index) => {
-    const voirPlusBtn = card.querySelector('.voir-plus');
-    if (voirPlusBtn) {
-        voirPlusBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const project = projectData[index];
-            
-            const modal = document.getElementById('project-modal');
-            const modalContent = document.getElementById('modal-content');
-            
-            // Show modal
-            modal.classList.remove('hidden');
-            modal.style.opacity = '0';
-            
-            modalContent.innerHTML = `
-                <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-                <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg mb-4">
-                <h2 class="text-2xl font-genocide mb-4 text-white">${project.title}</h2>
-                <p class="text-white/80">${project.description}</p>
-            `;
-            
-            // Add event listeners
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModalHandler();
-                }
-            });
-            
-            const closeBtn = modalContent.querySelector('#close-modal');
-            if (closeBtn) {
-                closeBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    closeModalHandler();
+// Add event listeners for regular project cards
+document.addEventListener('DOMContentLoaded', function() {
+    const regularProjectCards = document.querySelectorAll('#floating-projects .project-card');
+    
+    regularProjectCards.forEach((card, index) => {
+        const voirPlusBtn = card.querySelector('.voir-plus');
+        
+        if (voirPlusBtn) {
+            voirPlusBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const project = regularProjectData[index];
+                const modal = document.getElementById('project-modal');
+                const modalContent = document.getElementById('modal-content');
+                
+                // Show modal
+                modal.classList.remove('hidden');
+                modal.style.opacity = '0';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.zIndex = '2000'; // Higher z-index to appear above header
+                
+                // Set modal content
+                modalContent.style.height = '90vh';
+                modalContent.style.width = '50%';
+                modalContent.style.maxWidth = '50%';
+                modalContent.style.margin = 'auto';
+                modalContent.style.overflowY = 'auto';
+                modalContent.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+                modalContent.style.position = 'relative';
+                modalContent.style.padding = '2rem';
+                modalContent.style.borderRadius = '0.5rem';
+                
+                modalContent.innerHTML = `
+                    <h1 class="text-3xl font-genocide text-white/90 mb-8 text-center"></h1>
+                    <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div class="overflow-y-auto h-full pr-4 -mr-4">
+                        ${project.fullDescription}
+                    </div>
+                `;
+                
+                // Add modal event listeners
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeModalHandler();
+                    }
                 });
-            }
-            
-            // Animation
-            gsap.to(modal, {
-                opacity: 1,
-                duration: 0.3
+                
+                const closeBtn = modalContent.querySelector('#close-modal');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        closeModalHandler();
+                    });
+                }
+                
+                // Animation
+                gsap.to(modal, {
+                    opacity: 1,
+                    duration: 0.3
+                });
+                
+                gsap.fromTo(modalContent,
+                    { scale: 0.8, opacity: 0 },
+                    { scale: 1, opacity: 1, duration: 0.3, ease: "back.out" }
+                );
             });
-            
-            gsap.fromTo(modalContent,
-                { scale: 0.8, opacity: 0 },
-                { scale: 1, opacity: 1, duration: 0.3, ease: "back.out" }
-            );
-        });
-    }
+        }
+    });
 });
 
 // Handle escape key
@@ -684,18 +842,76 @@ div.innerHTML = `
     </button>
 `;
 
-// Update the project cards in normal mode
-projectCards.forEach((card, index) => {
-    card.className = 'project-card pointer-events-auto bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 w-80 cursor-pointer hover:scale-105 transition-transform';
-    card.innerHTML = `
-        <div class="relative h-48 mb-4 overflow-hidden rounded-lg">
-            <img src="${projectData[index].image}" alt="${projectData[index].title}" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        </div>
-        <h3 class="text-lg font-genocide text-white mb-2">${projectData[index].title}</h3>
-        <p class="text-white/80 text-sm mb-4 line-clamp-2">${projectData[index].description}</p>
-        <button class="voir-plus w-full py-2 px-4 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all text-sm font-medium">
-            Voir Plus
-        </button>
-    `;
+// Modify the regular view project cards click handlers
+document.querySelectorAll('#floating-projects .project-card .voir-plus').forEach((button, index) => {
+    button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const project = regularProjectData[index];
+        
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+
+
+        
+        // Add click handler for the entire div instead of just the button
+        div.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const project = projectData[i];
+            
+            const modal = document.getElementById('project-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            // Show modal
+            modal.classList.remove('hidden');
+            modal.style.opacity = '0';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            
+            modalContent.style.height = '90vh';
+            modalContent.style.width = '50%';
+            modalContent.style.maxWidth = '50%';
+            modalContent.style.margin = 'auto';
+            modalContent.style.overflowY = 'auto';
+            modalContent.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            
+            modalContent.innerHTML = `
+                <h1 class="text-3xl font-genocide text-white/90 mb-8 text-center fixed top-20 left-1/2 transform -translate-x-1/2">${project.title}</h1>
+                <button id="close-modal" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="overflow-y-auto h-full pr-4 -mr-4 mt-16">
+                    ${project.fullDescription}
+                </div>
+            `;
+            
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    modal.classList.add('hidden');
+                }
+            });
+            
+            const closeBtn = modalContent.querySelector('#close-modal');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                    modal.classList.add('hidden');
+                });
+            }
+            
+            gsap.to(modal, {
+                opacity: 1,
+                duration: 0.3
+            });
+            
+            gsap.fromTo(modalContent,
+                { scale: 0.8, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 0.3, ease: "back.out" }
+            );
+        });
+    });
 });

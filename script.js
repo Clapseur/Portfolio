@@ -3,34 +3,33 @@ const projectData = [
         title: "Clapseur - YouTube",
         description: "Video, montage, derush, upload, son, DA produit par mes soins ",
         fullDescription: `
-            <div class="space-y-8">
+            <div class="space-y-8 text-center">
                 <div class="relative w-full h-64">
                     <video class="w-full h-full object-cover rounded-lg" autoplay loop muted playsinline>
                         <source src="media/yt.mp4" type="video/mp4">
                     </video>
                 </div>
                 
-                <div class="prose prose-invert max-w-none center">
-
-                    <h2 class="text-xl font-genocide text-white/90 mt-8" center>Le Concept</h2>
-                    <p class="text-white/80 leading-relaxed mb-6">
+                <div class="prose prose-invert max-w-none text-center">
+                    <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Le Concept</h2>
+                    <p class="text-white/80 leading-relaxed mb-6 text-center">
                         La chaine YouTube etait un projet que j'avais lance en 2016, et j'ai commencé par créer des vidéos basique sur les jeux vidéo. J'ai ensuite commencé à publier des vidéos sur YouTube, en agrandissant ma malette de conaissance dans ce milieu.
                     </p>
                     
-                    <div class="space-y-4 center">
-                    <h3 class="text-xl font-genocide text-white/90 mt-8" center">Competences/Connaissance</h3>
-                    <p class="text-white/80 leading-relaxed">
-                        Clapseur est une chaîne YouTube dédiee à la creation de contenu innovant et engageant. C'est un défi que je relève depuis 2016. Chaque vidéo est soigneusement produite pour offrir une expérience unique aux spectateurs.
-                    </p>
-                    
-                    <h3 class="text-xl font-genocide text-white/90 mt-8" center">Contenu</h3>
-                    <ul class="list-disc list-inside text-white/80 space-y-2">
-                        <li>Vidéos Best-off</li>
-                        <li>Contenu original et créatif</li>
-                        <li>Montage Peu commun</li>
-                        <li>Interaction avec la communauté fréquente</li>
-                    </ul>
-                </div>
+                    <div class="space-y-4 text-center">
+                        <h3 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Competences/Connaissance</h3>
+                        <p class="text-white/80 leading-relaxed text-center">
+                            Clapseur est une chaîne YouTube dédiee à la creation de contenu innovant et engageant. C'est un défi que je relève depuis 2016. Chaque vidéo est soigneusement produite pour offrir une expérience unique aux spectateurs.
+                        </p>
+                        
+                        <h3 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Contenu</h3>
+                        <ul class="list-disc list-inside text-white/80 space-y-2 text-center mx-auto">
+                            <li>Vidéos Best-off</li>
+                            <li>Contenu original et créatif</li>
+                            <li>Montage Peu commun</li>
+                            <li>Interaction avec la communauté fréquente</li>
+                        </ul>
+                    </div>
                 </div>
             </div>`,
         image: "media/yt.webp",
@@ -41,7 +40,7 @@ const projectData = [
         title: "Clapseur - Soundcloud",
         description: "Un historique publique de mes projets musicaux",
         fullDescription: `
-            <div class="space-y-6">
+            <div class="space-y-6 text-center">
                 <div class="relative w-full h-96">
                     <iframe 
                         width="100%" 
@@ -51,20 +50,16 @@ const projectData = [
                         allow="autoplay" 
                         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1543949563&color=%2321201f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                     </iframe>
-                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                        <a href="https://soundcloud.com/clapseur" title="Clapseur" target="_blank" style="color: #cccccc; text-decoration: none;">Clapseur</a> · 
-                        <a href="https://soundcloud.com/clapseur/spy-shit" title="Spy shit" target="_blank" style="color: #cccccc; text-decoration: none;">Spy shit</a>
-                    </div>
                 </div>
                 
-                <div class="space-y-4">
-                    <h3 class="text-xl font-genocide text-white/90">Le Projet</h3>
-                    <p class="text-white/80 leading-relaxed">
+                <div class="space-y-4 text-center">
+                    <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Le Projet</h2>
+                    <p class="text-white/80 leading-relaxed text-center mx-auto">
                         La musique deupis mon plus jeune age m'a toujours fait vibré et a été une manière pour moi de m'exprimer d'une autre manière.
                     </p>
                     
-                    <h3 class="text-xl font-genocide text-white/90">Caracteristiques</h3>
-                    <ul class="list-disc list-inside text-white/80 space-y-2">
+                    <h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Caracteristiques</h2>
+                    <ul class="list-disc list-inside text-white/80 space-y-2 text-center mx-auto">
                         <li>Musique varie</li>
                         <li>Prodeuction de MAO</li>
                         <li>FL Studio/Abbleton</li>
@@ -79,24 +74,28 @@ const projectData = [
         title: "Clapseur - Twitch",
         description: "Ma chaine de streaming contabilisant le plus grand nombre de d'abonnés.",
         fullDescription: `
-            <div class="space-y-6">
+            <div class="space-y-6 text-center">
                 <div class="relative w-full h-96">
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://player.twitch.tv/?channel=clapseur&autoplay=false&parent=iframe.ly&parent=cdn.iframe.ly&parent=iframely.net&parent=iframely.com&parent=if-cdn.com" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media *;"></iframe></div>
-                </div>
-                
-                <div class="space-y-4">
-                    <h3 class="text-xl font-genocide text-white/90">L'Inspiration</h3>
-                    <p class="text-white/80 leading-relaxed">
-                        J'ai longtemps aimé le jeu Counter-Strike 2, et j'ai toujours aimé la communaute de ce jeu. J'ai donc décidé de créer une chaine Twitch qui mettait en valeur ma passion pour le jeu et espere egalement pourvoir la transmettre a d'autres personnes.
-                    </p>
+                    <div class="relative w-full h-96">
+                        <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+                            <iframe src="https://player.twitch.tv/?channel=clapseur&autoplay=false&parent=iframe.ly&parent=cdn.iframe.ly&parent=iframely.net&parent=iframely.com&parent=if-cdn.com" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media *;"></iframe>
+                        </div>
+                    </div>
                     
-                    <h3 class="text-xl font-genocide text-white/90">Contenu</h3>
-                    <ul class="list-disc list-inside text-white/80 space-y-2">
-                        <li>Vidéos Best-off</li>
-                        <li>Contenu original et créatif</li>
-                        <li>Montage Peu commun</li>
-                        <li>Interaction avec la communauté fréquente</li>
-                    </ul>
+                    <div class="space-y-4 text-center">
+                        <h3 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">L'Inspiration</h3>
+                        <p class="text-white/80 leading-relaxed text-center mx-auto">
+                            J'ai longtemps aimé le jeu Counter-Strike 2, et j'ai toujours aimé la communaute de ce jeu. J'ai donc décidé de créer une chaine Twitch qui mettait en valeur ma passion pour le jeu et espere egalement pourvoir la transmettre a d'autres personnes.
+                        </p>
+                        
+                        <h3 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto">Contenu</h3>
+                        <ul class="list-disc list-inside text-white/80 space-y-2 text-center mx-auto">
+                            <li>Vidéos Best-off</li>
+                            <li>Contenu original et créatif</li>
+                            <li>Montage Peu commun</li>
+                            <li>Interaction avec la communauté fréquente</li>
+                        </ul>
+                    </div>
                 </div>
             </div>`,
         image: "media/tw.png",
@@ -315,12 +314,12 @@ function enterBigModeHandler() {
         const project = projectData[i];
         // Updated HTML with smaller image container and project data
         div.innerHTML = `
-            <div class="h-full flex flex-col justify-between">
-                <div class="h-8 overflow-hidden rounded mb-1">
-                    <img src="${project.image}" alt="${project.title}" style="width: 80px; height: 50px; object-fit: contain; margin: 0 auto;" class="rounded">
+            <div class="h-full flex flex-col justify-between items-center text-center">
+                <div class="h-8 overflow-hidden rounded mb-1 flex justify-center">
+                    <img src="${project.image}" alt="${project.title}" style="width: 80px; height: 50px; object-fit: contain;" class="rounded">
                 </div>
-                <h3 style="font-size: 8px; margin-bottom: 2px; color: white; font-family: genocide;">${project.title}</h3>
-                <p style="font-size: 6px; color: rgba(255,255,255,0.8); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${project.description}</p>
+                <h3 style="font-size: 8px; margin-bottom: 2px; color: white; font-family: genocide; text-align: center; width: 100%;">${project.title}</h3>
+                <p style="font-size: 6px; color: rgba(255,255,255,0.8); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: center; width: 100%;">${project.description}</p>
             </div>
         `;
 
@@ -410,8 +409,8 @@ function enterBigModeHandler() {
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <div class="overflow-y-auto h-full pr-4 -mr-4 pb-16">
-                        ${project.fullDescription.replace(/<h2/g, '<h2 class="text-center text-xl font-genocide text-white/90 mt-8"')}
+                    <div class="overflow-y-auto h-full pr-4 -mr-4 pb-16 text-center">
+                        ${project.fullDescription.replace(/<h2/g, '<h2 class="text-center text-xl font-genocide text-white/90 mt-8 mx-auto"')}
                         <div class="mt-8 text-center">
                             <a href="${websiteUrl}" target="_blank" class="inline-block px-6 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-all font-genocide border border-white/30 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                                 Visualiser
